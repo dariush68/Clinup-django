@@ -1,0 +1,16 @@
+*.pyc
+*.sqlite3
+*.sqlite
+__init__.py
+
+/venv/
+/.pytest_cache/
+/.idea/
+/Core/migrations/
+
+/data/
+
+
+/.cloud/
+.cloud/
+/.cloud

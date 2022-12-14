@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+  web:
+    build: .
+#    command: python manage.py runserver 0.0.0.0:8000  # normal
+    command: gunicorn CheckupServer.wsgi:application --bind 0.0.0.0:8001
+    volumes:
+      - .:/code
+    ports:
+      - "8001:8001"
+    expose:
+      - 8000
+    networks:
+      - hostnetwork
+    restart: always
+
+volumes:
+  my-datavolume:
+    driver: local
+
+# connect to external network (docker network create --driver bridge sqldb)
+networks:
+  hostnetwork:
+    external: true

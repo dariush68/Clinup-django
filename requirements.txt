@@ -1,0 +1,15 @@
+Django==3.2.9
+django-mptt
+djangorestframework
+djangorestframework-simplejwt
+mysqlclient
+Pillow
+drf-yasg
+django-filter
+kavenegar
+pytest
+pytest-django
+drf-writable-nested
+django-smart-selects
+gunicorn==20.0.4
+django-cors-headers
